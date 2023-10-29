@@ -10,7 +10,6 @@
       <div class="five">5</div>
       <div class="six">6</div>
       <div class="seven">7</div>
-      <div class="eight">8</div>
     </div>
   </div>
 </template>
@@ -32,5 +31,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import '../assets/styles/SpinnerWheel.css';
+@import "../assets/styles/SpinnerWheel.css";
 </style>

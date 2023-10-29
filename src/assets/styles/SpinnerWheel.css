@@ -16,19 +16,19 @@
 .container {
   width: 500px;
   height: 500px;
-  background-color: #ccc;
+  background-color: #42b0d5;
   border-radius: 50%;
-  border: 15px solid #dde;
+  border: 15px solid #42b0d5;
   position: relative;
   overflow: hidden;
-  transition: 5s;
+  transition: 1s;
 }
 
 .container div {
   height: 50%;
   width: 200px;
   position: absolute;
-  clip-path: polygon(100% 0, 50% 100%, 0 0);
+  clip-path: polygon(50.7% 0%, 100% 100%, 0% 100%);
   transform: translateX(-50%);
   transform-origin: bottom;
   text-align: center;
@@ -43,36 +43,33 @@
 }
 
 .container .one {
-  background-color: #3f51b5;
-  left: 50%;
+  background-color: #fff;
+  transform: rotate(51.4deg);
+
 }
 .container .two {
-  background-color: #ff9800;
-  transform: rotate(45deg);
+  background-color: #fff;
+  transform: rotate(102.8deg);
 }
 .container .three {
-  background-color: #e91e63;
-  transform: rotate(90deg);
+  background-color: #fff;
+  transform: rotate(154.2deg);
 }
 .container .four {
-  background-color: #4caf50;
-  transform: rotate(135deg);
+  background-color: #fff;
+  transform: rotate(205.6deg);
 }
 .container .five {
-  background-color: #009688;
-  transform: rotate(180deg);
+  background-color: #fff;
+  transform: rotate(257deg);
 }
 .container .six {
-  background-color: #795548;
-  transform: rotate(225deg);
+  background-color: #fff;
+  transform: rotate(308.4deg);
 }
 .container .seven {
-  background-color: #9c27b0;
-  transform: rotate(270deg);
-}
-.container .eight {
-  background-color: #f44336;
-  transform: rotate(315deg);
+  background-color: #fff;
+  transform: rotate(360deg);
 }
 
 .arrow {
