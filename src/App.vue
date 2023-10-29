@@ -1,5 +1,5 @@
 <template>
-  <SpinnerWheel msg="Maersk Spinner Wheel" />
+  <SpinnerWheel />
 </template>
 
 <script>
