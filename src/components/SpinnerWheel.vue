@@ -1,7 +1,6 @@
 <template>
   <div class="body">
-    <button id="spin" @click="turnWheel()">Spin</button>
-    <span class="arrow"></span>
+    <div id="spin" @click="turnWheel()"></div>
     <div class="container">
       <div class="one">1</div>
       <div class="two">2</div>
@@ -17,19 +16,24 @@
 <script>
 export default {
   name: "SpinnerWheel",
+  data() {
+    return {};
+  },
   methods: {
     turnWheel() {
       let container = document.querySelector(".container");
+      let spin = document.querySelector("#spin");
       let number = Math.ceil(Math.random() * 1000);
-      container.style.transition = "transform 0.5s";
       container.style.transform = "rotate(" + number + "deg)";
-      number += Math.ceil(Math.random() * 1000);
+      spin.classList.add("anm");
+      setTimeout(function () {
+        spin.classList.remove("anm");
+      }, 1000);
     },
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @import "../assets/styles/SpinnerWheel.css";
 </style>

@@ -5,11 +5,14 @@
 .body {
   margin: 0;
   padding: 0;
-  background-color: #34495e;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-image: url(../maerskbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
   overflow: hidden;
 }
 
@@ -21,7 +24,7 @@
   border: 15px solid #42b0d5;
   position: relative;
   overflow: hidden;
-  transition: 1s;
+  transition: 2s;
 }
 
 .container div {
@@ -45,7 +48,6 @@
 .container .one {
   background-color: #fff;
   transform: rotate(51.4deg);
-
 }
 .container .two {
   background-color: #fff;
@@ -71,37 +73,36 @@
   background-color: #fff;
   transform: rotate(360deg);
 }
-
-.arrow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff;
-}
-
-.arrow::before {
-  content: "\1F817";
-  font-size: 50px;
-}
-
 #spin {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 45%;
   z-index: 10;
-  background-color: #e2e2e2;
-  text-transform: uppercase;
-  border: 8px solid #fff;
-  font-weight: bold;
-  font-size: 20px;
-  color: #a2a2a2;
-  width: 80px;
-  height: 80px;
-  font-family: sans-serif;
-  border-radius: 50%;
+  border: 0px solid #fff;
+  width: 160px;
+  height: 165px;
   cursor: pointer;
   outline: none;
-  letter-spacing: 1px;
+  background-image: url(../maerskvessel.png);
+  background-repeat: no-repeat;
+  background-size: 160px 175px;
+}
+.anm {
+  animation-name: example;
+  animation-duration: 2s;
+}
+@keyframes example {
+  0%,
+  100% {
+    left: 50%;
+  }
+  25%,
+  75% {
+    left: 47%;
+  }
+  50% {
+    left: 53%;
+  }
 }
