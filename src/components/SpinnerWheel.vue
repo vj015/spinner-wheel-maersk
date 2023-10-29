@@ -1,7 +1,14 @@
 <template>
   <div class="body">
-    <div id="spin" @click="turnWheel()"></div>
-    <div class="container">
+    <div
+      id="spin"
+      :class="{ shipanimation: isSpinning }"
+      @click="turnWheel()"
+    ></div>
+    <div
+      class="container"
+      :style="{ transform: `rotate(${rotationAngle}deg)` }"
+    >
       <div class="one">1</div>
       <div class="two">2</div>
       <div class="three">3</div>
@@ -17,17 +24,18 @@
 export default {
   name: "SpinnerWheel",
   data() {
-    return {};
+    return {
+      rotationAngle: 0,
+      isSpinning: false,
+    };
   },
   methods: {
     turnWheel() {
-      let container = document.querySelector(".container");
-      let spin = document.querySelector("#spin");
-      let number = Math.ceil(Math.random() * 1000);
-      container.style.transform = "rotate(" + number + "deg)";
-      spin.classList.add("anm");
-      setTimeout(function () {
-        spin.classList.remove("anm");
+      const number = Math.ceil(Math.random() * 1000);
+      this.rotationAngle += number;
+      this.isSpinning = true;
+      setTimeout(() => {
+        this.isSpinning = false;
       }, 1000);
     },
   },

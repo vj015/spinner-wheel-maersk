@@ -17,8 +17,8 @@
 }
 
 .container {
-  width: 500px;
-  height: 500px;
+  width: 700px;
+  height: 700px;
   background-color: #42b0d5;
   border-radius: 50%;
   border: 15px solid #42b0d5;
@@ -42,7 +42,7 @@
   font-weight: bold;
   font-family: sans-serif;
   color: #fff;
-  left: 135px;
+  left: 240px;
 }
 
 .container .one {
@@ -89,11 +89,11 @@
   background-repeat: no-repeat;
   background-size: 160px 175px;
 }
-.anm {
-  animation-name: example;
+.shipanimation {
+  animation-name: shiplinearmovement;
   animation-duration: 2s;
 }
-@keyframes example {
+@keyframes shiplinearmovement {
   0%,
   100% {
     left: 50%;
