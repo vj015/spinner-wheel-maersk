@@ -44,7 +44,6 @@
       />
       <ResultModal
         v-show="showResult"
-        @close="closeResultModal"
         :first="first"
         :constellation="constellation"
         :fail="fail"
@@ -87,9 +86,9 @@ export default {
     showResultModal() {
       this.showResult = true;
     },
-    closeResultModal() {
-      this.showResult = false;
-    },
+    // closeResultModal() {
+    //   this.showResult = false;
+    // },
     closeModal() {
       this.isModalVisible = false;
     },

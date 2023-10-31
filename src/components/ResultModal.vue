@@ -30,7 +30,7 @@ export default {
   props: ["first", "constellation", "fail"],
   methods: {
     close() {
-      this.$emit("close");
+      location.reload();
     },
   },
 };
