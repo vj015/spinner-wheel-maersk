@@ -12,13 +12,27 @@
       class="container"
       :style="{ transform: `rotate(${rotationAngle}deg)` }"
     >
-      <div class="one" id="segment-1">1</div>
-      <div class="two" id="segment-2">2</div>
-      <div class="three" id="segment-3">3</div>
-      <div class="four" id="segment-4">4</div>
-      <div class="five" id="segment-5">5</div>
-      <div class="six" id="segment-6">6</div>
-      <div class="seven" id="segment-7">7</div>
+      <div class="one" id="segment-1">
+        <span>{{ "Our Employees" }}</span>
+      </div>
+      <div class="two" id="segment-2">
+        <span>{{ "Constant Care" }}</span>
+      </div>
+      <div class="three" id="segment-3">
+        <span>{{ "Uprightness" }}</span>
+      </div>
+      <div class="four" id="segment-4">
+        <span>{{ "Humbleness" }}</span>
+      </div>
+      <div class="five" id="segment-5">
+        <span>{{ "Our Name" }}</span>
+      </div>
+      <div class="six" id="segment-6">
+        <span>{{ "DEI" }}</span>
+      </div>
+      <div class="seven" id="segment-7">
+        <span>{{ "Carbon Neutral" }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -33,6 +47,7 @@ export default {
       count: 0,
       winner: 0,
       nowinner: false,
+      message: "Our \n Employees",
     };
   },
   methods: {

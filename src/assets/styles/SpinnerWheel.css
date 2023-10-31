@@ -48,30 +48,103 @@
 .container .one {
   background-color: #fff;
   transform: rotate(51.4deg);
+  /* color: black; */
+}
+.container .one span {
+  color: #00243d;
+  position: absolute;
+  transform: rotate(-105deg); /* Adjust the angle as needed */
+  transform-origin: top center; /* Set the rotation origin as needed */
+  height: 70px;
+  font-size: x-large;
+  font-family: fantasy;
+  /* font-size: 16px;
+  line-height: 24px; */
 }
 .container .two {
   background-color: #fff;
   transform: rotate(102.8deg);
 }
+.container .two span {
+  color: #00243d;
+  position: absolute;
+  transform: rotate(-105deg); /* Adjust the angle as needed */
+  transform-origin: top center; /* Set the rotation origin as needed */
+  height: 70px;
+  font-size: x-large;
+  font-family: fantasy;
+  /* font-size: 16px;
+  line-height: 24px; */
+}
 .container .three {
   background-color: #fff;
   transform: rotate(154.2deg);
+}
+.container .three span {
+  color: #00243d;
+  position: absolute;
+  transform: rotate(-105deg); /* Adjust the angle as needed */
+  transform-origin: top center; /* Set the rotation origin as needed */
+  height: 70px;
+  font-size: x-large;
+  font-family: fantasy;
+  /* font-size: 16px;
+  line-height: 24px; */
 }
 .container .four {
   background-color: #fff;
   transform: rotate(205.6deg);
 }
+.container .four span {
+  color: #00243d;
+  position: absolute;
+  transform: rotate(-105deg); /* Adjust the angle as needed */
+  transform-origin: top center; /* Set the rotation origin as needed */
+  height: 70px;
+  font-size: x-large;
+  font-family: fantasy;
+  /* font-size: 16px;
+  line-height: 24px; */
+}
 .container .five {
   background-color: #fff;
   transform: rotate(257deg);
+}
+.container .five span {
+  color: #00243d;
+  position: absolute;
+  transform: rotate(-105deg); /* Adjust the angle as needed */
+  transform-origin: top center; /* Set the rotation origin as needed */
+  height: 70px;
+  font-size: x-large;
+  font-family: fantasy;
+  /* font-size: 16px;
+  line-height: 24px; */
 }
 .container .six {
   background-color: #fff;
   transform: rotate(308.4deg);
 }
+.container .six span {
+  color: #00243d;
+  position: absolute;
+  transform: rotate(-105deg);
+  transform-origin: top center;
+  height: 70px;
+  font-size: x-large;
+  font-family: fantasy;
+}
 .container .seven {
   background-color: #fff;
   transform: rotate(360deg);
+}
+.container .seven span {
+  color: #00243d;
+  position: absolute;
+  transform: rotate(-105deg);
+  transform-origin: top center;
+  font-size: x-large;
+  font-family: fantasy;
 }
 #spin {
   position: absolute;
