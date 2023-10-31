@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="body" :class="isModalVisible ? 'fade-main' : ''">
+    <div class="body" :class="isModalVisible || showResult ? 'fade-main' : ''">
       <div class="arrow" id="crane">
         <img src="../assets/crane-icon.png" alt="Icon" />
       </div>
@@ -35,7 +35,6 @@
           <span>{{ "Carbon Neutral" }}</span>
         </div>
       </div>
-      <!-- <button type="button" class="btn" @click="showModal">Open Modal!</button> -->
     </div>
     <div class="formatModal">
       <ModalComponent
@@ -43,16 +42,25 @@
         @close="closeModal"
         @SelectedValue="SelectedValue"
       />
+      <ResultModal
+        v-show="showResult"
+        @close="closeResultModal"
+        :first="first"
+        :constellation="constellation"
+        :fail="fail"
+      />
     </div>
   </div>
 </template>
 
 <script>
 import ModalComponent from "./ModalComponent.vue";
+import ResultModal from "./ResultModal.vue";
 export default {
   name: "SpinnerWheel",
   components: {
     ModalComponent,
+    ResultModal,
   },
   data() {
     return {
@@ -63,6 +71,10 @@ export default {
       nowinner: false,
       isModalVisible: false,
       selectedVal: "",
+      showResult: false,
+      first: false,
+      constellation: false,
+      fail: false,
     };
   },
   mounted() {
@@ -71,6 +83,12 @@ export default {
   methods: {
     showModal() {
       this.isModalVisible = true;
+    },
+    showResultModal() {
+      this.showResult = true;
+    },
+    closeResultModal() {
+      this.showResult = false;
     },
     closeModal() {
       this.isModalVisible = false;
@@ -110,10 +128,29 @@ export default {
       if (this.count > 1) {
         this.nowinner = true;
         this.winner = null;
+        this.fail = true;
+        this.first = false;
+        this.constellation = false;
       } else {
-        this.nowinner = false;
+        if (this.winner === this.selectedVal) {
+          this.fail = false;
+          this.first = true;
+          this.constellation = false;
+          this.nowinner = false;
+        } else if (this.winner === 6 || this.winner === 7) {
+          this.fail = false;
+          this.first = false;
+          this.constellation = true;
+          this.nowinner = false;
+        } else {
+          this.fail = true;
+          this.first = false;
+          this.constellation = false;
+          this.nowinner = true;
+        }
         console.log("Result Overlapping one", this.winner);
       }
+      this.showResultModal();
     },
     turnWheel() {
       const number = Math.ceil(Math.random() * 1000);
